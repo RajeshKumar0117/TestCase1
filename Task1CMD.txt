@@ -1,0 +1,141 @@
+C:\Windows\System32>cd\
+
+C:\>"program Files (x86)"
+'"program Files (x86)"' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\>cd
+C:\
+
+C:\>cd \
+
+C:\>"Program Files (x86)"
+'"Program Files (x86)"' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\> "Program Files (x86)"
+'"Program Files (x86)"' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\> "Program Files (x86)"
+'"Program Files (x86)"' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\>cd "Program Files (x86)"
+
+C:\Program Files (x86)>cd Nmap
+
+C:\Program Files (x86)\Nmap>dir
+ Volume in drive C is Windows
+ Volume Serial Number is 66A3-C284
+
+ Directory of C:\Program Files (x86)\Nmap
+
+04-08-2025  20:29    <DIR>          .
+04-08-2025  20:28    <DIR>          ..
+13-05-2025  01:41            56,784 3rd-party-licenses.txt
+13-05-2025  01:42           209,282 ca-bundle.crt
+13-05-2025  01:41           784,450 CHANGELOG
+13-05-2025  01:55            26,562 COPYING_HIGWIDGETS
+13-05-2025  01:41            15,086 icon1.ico
+13-05-2025  04:32         4,077,944 libcrypto-3.dll
+13-05-2025  04:32           222,072 libssh2.dll
+13-05-2025  04:32           678,264 libssl-3.dll
+13-05-2025  01:41            29,575 LICENSE
+04-08-2025  20:28    <DIR>          licenses
+13-05-2025  04:32           370,040 ncat.exe
+13-05-2025  01:42             1,259 ndiff.bat
+13-05-2025  01:42            54,831 ndiff.py
+13-05-2025  01:55             1,957 NDIFF_README
+13-05-2025  01:41         1,292,939 nmap-mac-prefixes
+13-05-2025  01:41         5,306,593 nmap-os-db
+13-05-2025  01:41             6,845 nmap-protocols
+13-05-2025  01:41            43,716 nmap-rpc
+13-05-2025  01:41         2,574,497 nmap-service-probes
+13-05-2025  01:41           997,292 nmap-services
+13-05-2025  04:32         2,715,000 nmap.exe
+13-05-2025  01:41            31,936 nmap.xsl
+13-05-2025  01:41               192 nmap_performance.reg
+13-05-2025  04:32           354,168 nping.exe
+04-08-2025  20:28    <DIR>          nselib
+13-05-2025  01:41            49,961 nse_main.lua
+13-05-2025  01:41               186 README-WIN32
+04-08-2025  20:28    <DIR>          scripts
+13-05-2025  04:32            92,984 Uninstall.exe
+04-08-2025  20:29    <DIR>          zenmap
+04-08-2025  20:29             2,175 Zenmap.lnk
+13-05-2025  01:55             2,173 ZENMAP_README
+13-05-2025  04:32           110,968 zlibwapi.dll
+              29 File(s)     20,109,731 bytes
+               6 Dir(s)   2,074,124,288 bytes free
+
+C:\Program Files (x86)\Nmap> ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Unknown adapter Local Area Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 1:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::ee78:2f9f:93ee:5047%21
+   IPv4 Address. . . . . . . . . . . : 192.168.1.34
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::1%21
+                                       192.168.1.1
+
+C:\Program Files (x86)\Nmap>nmap -sS 192.168.1.0/24
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-08-04 20:47 +0530
+Nmap scan report for 192.168.1.1
+Host is up (0.0053s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT    STATE    SERVICE
+21/tcp  filtered ftp
+22/tcp  open     ssh
+23/tcp  filtered telnet
+53/tcp  open     domain
+80/tcp  open     http
+443/tcp open     https
+MAC Address: B8:B7:DB:F1:77:DF (Goip Global Services Pvt.)
+
+Nmap scan report for 192.168.1.37
+Host is up (0.011s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT     STATE    SERVICE
+135/tcp  open     msrpc
+139/tcp  open     netbios-ssn
+445/tcp  open     microsoft-ds
+8400/tcp open     cvd
+9000/tcp filtered cslistener
+9010/tcp filtered sdr
+MAC Address: D4:D8:53:3D:3D:80 (Intel Corporate)
+
+Nmap scan report for 192.168.1.34
+Host is up (0.00014s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+8090/tcp open  opsmessaging
+
+Nmap done: 256 IP addresses (3 hosts up) scanned in 35.34 seconds
